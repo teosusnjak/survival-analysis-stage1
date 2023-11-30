@@ -1,0 +1,6 @@
+patient,specific_health_conditions,mobilisation_method,mobility_equipment_used,night_assistance_needed,poor_eating_or_lack_of_appetite,pressure_ulcer_risk_scale,recent_weight_loss,skin_integrity_change,smoked_in_past,gender,age_category,rx_risk_score,chess_scale_score,cognitive_performance_scale_score,depression_rating_scale_score,falls_history,faecal_incontinence,urinary_incontinence
+0,3,1,1,0,1,2,0,0,0,1,85,2,3,1,0,0,1,1
+1,1,2,1,1,0,1,1,1,1,1,86,0,2,3,3,3,1,1
+2,0,1,3,1,1,1,0,0,0,0,88,9,0,2,1,1,0,1
+3,1,4,3,1,0,0,1,1,1,1,75,6,0,5,2,2,0,0
+4,2,3,2,0,1,3,1,1,0,0,90,13,3,2,1,2,1,0
