@@ -14,6 +14,30 @@ Our goal is to provide a transparent, accurate estimate of survival probabilitie
 
 The study adheres to the Transparent Reporting of a multivariable prediction model for Individual Prognosis Or Diagnosis (TRIPOD) guideline, ensuring methodological robustness and transparency in reporting. As such, the full model and its example usage is provided here and can be accessed through the Jupyter Notebook.
 
+## Overview of Machine Learning Models Employed in the Study
+
+| Model                         | Characteristics                                                                                                                                                                                                                                       |
+|-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Cox Proportional Hazards | The CoxPH is an extension of the classical Cox Proportional Hazards model, containing a penalty term to better manage high-dimensional datasets. Its core advantage is its capacity to manage the problems of both high dimensionality and event sparsity. |
+| Elastic Net                 | The Elastic Net model amalgamates the L1 and L2 regularization techniques of Lasso and Ridge Regression, respectively. This hybridization allows the model to efficiently navigate the challenges of multicollinearity and variable selection.             |
+| Ridge Regression            | Ridge Regression employs L2 regularization to provide an alternative approach to handling multicollinearity. It is adept at shrinking coefficients, stabilizing them in the presence of highly correlated variables.                                  |
+| Lasso                 | Lasso utilizes L1 regularization to achieve both regularization and variable selection. It is especially useful for high-dimensional datasets where feature selection is vital, as it drives some coefficients to zero.                                |
+| Gradient Boosting      | Gradient Boosting is a state-of-the-art ensemble learning technique that builds strong predictive models by aggregating weak learners. Its adaptability and effectiveness have been empirically validated in many settings, including healthcare.          |
+| XGBoost                      | XGBoost is as an optimized variant of the Gradient Boosting algorithm, notable for computational efficiency and scalability. Its predictive capability has been demonstrated through its dominance in various ML competitions.                          |
+| Random Forest            | Random Forest is an ensemble of decision trees, each constructed with a bootstrapped sample of the data and a subset of variables. Its robustness against outliers and irrelevant features makes it well suited for modelling clinical data.              |
+
+
+## Overview of Hyperparameter Settings for the Models
+
+| Model             | Hyperparameters                                                                                                                                                                                                                               |
+|-------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| CoxPH [tibshirani1997]          | None                                                                                                                                                                                                                                          |
+| Elastic Net       | l1_ratio=1.0, n_alphas=1, alphas=[0.00034], normalize=True, fit_baseline_model=True                                                                                                                                                          |
+| Ridge Regression  | l1_ratio=$10^{-100}$, n_alphas=1, alphas=[2.24e-06], normalize=True, fit_baseline_model=True                                                                                                                                                 |
+| Lasso             | l1_ratio=0.9, alpha_min_ratio=0.01, fit_baseline_model=True                                                                                                                                                                                   |
+| Gradient Boosting | n_estimators=771, min_samples_split=20.04, max_depth=7, min_samples_leaf=1.85, learning_rate=0.28, dropout_rate=0.05, objective='survival:cox', max_features=4, subsample=0.83                                                               |
+| XGBoost           | num_boost_round=1107, learning_rate=0.018, max_depth=3, colsample_bytree=0.83, gamma=0.49, objective='survival:cox', subsample=0.58                                                                                                           |
+| Random Forest     | n_estimators=592, min_samples_split=2.54, max_depth=7, min_samples_leaf=20.89                                                                                                                                                                 |
 
 ## Repository Structure
 
