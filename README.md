@@ -1,6 +1,7 @@
 # Survival Modelling in Residential Aged Care using Explainable AI
 
-Machine learning models developed in our research study on survival modelling in residential aged care facilities.
+Machine learning models developed in our research study ([Link to the document](https://arxiv.org/abs/2312.00271)
+) on survival modelling in residential aged care facilities.
 
 ## Overview
 
@@ -54,4 +55,4 @@ The following libraries are needed:
 
 ## Contact
 
-For queries regarding this project, please refer to the contact details in the study paper.
+For queries regarding this project, please refer to the contact details in the study paper ([Link to the document](https://arxiv.org/abs/2312.00271)).
